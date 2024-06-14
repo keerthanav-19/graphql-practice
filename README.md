@@ -6,28 +6,28 @@ Installation :
 
 	To clone this Repository to your local environment, use the following command:
     
-		git clone https://github.com/Keerthanachinnu/graphql-practice.git
+		git clone https://github.com/keerthanav-19/graphql-practice.git
 
 To start the app :
 
-	•	Run the command "go run server.go" from the root folder.
+	â€¢	Run the command "go run server.go" from the root folder.
 
 Tool used to test the APIS :
 
-	•	Postman
+	â€¢	Postman
 
 Usage :
 
-	•	Start the application using the command "go run server.go".
+	â€¢	Start the application using the command "go run server.go".
 	
-  •	Execute the GraphQl Query – 
+  â€¢	Execute the GraphQl Query â€“ 
     
 		URL :- http://localhost:9091/goengine?query={list{id,name,info,price}} 
 
 Adding New API to the boiler plate :
 
-	•	Write a graphql schema under schemas folder 
-                     sample schema – 
+	â€¢	Write a graphql schema under schemas folder 
+                     sample schema â€“ 
 					
                     var ProductType = graphql.NewObject(
     					graphql.ObjectConfig{
@@ -50,17 +50,17 @@ Adding New API to the boiler plate :
 					)
 
 
-	•	Write a graphql resolver under resolvers folder 
+	â€¢	Write a graphql resolver under resolvers folder 
     
-		sample resolver – 
+		sample resolver â€“ 
         
 		func ProductList(params graphql.ResolveParams) (interface{}, error) {
     		return product_data.Products, nil
 		}
 
-	•	Register the Query/Mutation under query/mutaion folder respectively 
+	â€¢	Register the Query/Mutation under query/mutaion folder respectively 
     
-		sample query entry – 
+		sample query entry â€“ 
         
 		"list": &graphql.Field{
        		Type: graphql.NewList(product_schema.ProductType), //schema
@@ -70,6 +70,6 @@ Adding New API to the boiler plate :
 
 Contributing :
 
-	•	Pull requests are welcome. Please make sure to update tests as appropriate.
+	â€¢	Pull requests are welcome. Please make sure to update tests as appropriate.
 
 
